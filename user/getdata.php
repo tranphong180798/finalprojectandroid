@@ -35,7 +35,7 @@ while($row=mysqli_fetch_assoc($data))
         ,$row['gender'],$row['address'],$row['role'],$row['age'],$row['faculty'],$row['schoolyear']));
  }
 
-
+ var_dump($mangSV);
 echo json_encode($mangSV);
 
 ?>
