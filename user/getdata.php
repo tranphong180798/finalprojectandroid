@@ -9,7 +9,7 @@ require "dbCon.php";
 //tao class
  class User{
 //tao construct
-    function User($id,$hoten,$mssv,$username,$password,$ngaysinh,$gioitinh,$diachi,$vaitro,$tuoi,$khoa,$nienkhoa)
+    public function __construct($id,$hoten,$mssv,$username,$password,$ngaysinh,$gioitinh,$diachi,$vaitro,$tuoi,$khoa,$nienkhoa)
     {
         $this->ID=$id;
         $this->HoTen=$hoten;
@@ -23,7 +23,6 @@ require "dbCon.php";
         $this->Tuoi=$tuoi;
         $this->Khoa=$khoa;
         $this->NienKhoa=$nienkhoa;
-
     }
 }
 //tao mang
@@ -31,7 +30,9 @@ $mangSV= [];
 
 while($row=mysqli_fetch_assoc($data))
  {
-     $mangSV[] = ['id'=>$row['idUser'], 'name'=>$row['NAME']];
+//     $mangSV[] = ['id'=>$row['idUser'], 'name'=>$row['NAME']];
+     $mangSV[] = new User($row['idUser'],$row['NAME'],$row['mssv'],$row['username'],$row['password'],$row['DateOfBirth']
+        ,$row['gender'],$row['address'],$row['role'],$row['age'],$row['faculty'],$row['schoolyear']);
 //        array_push($mangSV,new User($row['idUser'],$row['NAME'],$row['mssv'],$row['username'],$row['password'],$row['DateOfBirth']
 //        ,$row['gender'],$row['address'],$row['role'],$row['age'],$row['faculty'],$row['schoolyear']));
  }
