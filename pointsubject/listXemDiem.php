@@ -1,6 +1,6 @@
 <?php
 
-require "dbCon.php";
+require "../dbCon.php";
 
  $query="SELECT *FROM result WHERE point >0 ";
  $data=mysqli_query($connect,$query);
@@ -9,7 +9,7 @@ require "dbCon.php";
 //tao class
  class Result{
 //tao construct
-    function Result($id,$tenmonhoc,$sotinchi,$points,$tenuser,$hocki)
+    function __construct($id,$tenmonhoc,$sotinchi,$points,$tenuser,$hocki)
     {
         $this->ID=$id;
         $this->TenMonHoc=$tenmonhoc;

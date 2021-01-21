@@ -1,5 +1,5 @@
 <?php
-    require "dbCon.php";
+  require "../dbCon.php";
 
     $tenmonhoc=$_POST['tenMH'];
     $sotinchi=$_POST['sotinchiMH'];

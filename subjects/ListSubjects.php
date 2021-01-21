@@ -1,6 +1,6 @@
 <?php
 
-require "dbCon.php";
+require "../dbCon.php";
 
  $query="SELECT s.idMonHoc,s.tenmonhoc,s.credit,c.idCategory,c.NAMEE,t.idTeacher,t.nameTeacher,s.semester FROM subjects  s LEFT JOIN category c  ON s.category_id=c.idCategory LEFT JOIN teacher t ON s.teacher_id=t.idTeacher  ";
  $data=mysqli_query($connect,$query);
@@ -9,7 +9,7 @@ require "dbCon.php";
 //tao class
  class Subjects{
 //tao construct
-    function Subjects($id,$tenmonhoc,$sotinchi,$id_khoa,$tenKhoa,$id_teacher,$tenGiaoVien,$kithi)
+    function __construct($id,$tenmonhoc,$sotinchi,$id_khoa,$tenKhoa,$id_teacher,$tenGiaoVien,$kithi)
     {
         $this->ID=$id;
         $this->TenMonHoc=$tenmonhoc;

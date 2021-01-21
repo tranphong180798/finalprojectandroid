@@ -1,5 +1,5 @@
 <?php
-    require "dbCon.php";
+ require "../dbCon.php";
 
     $hoten=$_POST['hotenGV'];
     $tuoi=$_POST['tuoiGGV'];

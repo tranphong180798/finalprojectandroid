@@ -1,5 +1,5 @@
 <?php
-    require "dbCon.php";
+  require "../dbCon.php";
     $mssv=$_POST['mssvSV'];
     $hoten=$_POST['hotenSV'];
     $khoa=$_POST['khoaSV'];

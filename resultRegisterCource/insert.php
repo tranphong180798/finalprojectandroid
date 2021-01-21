@@ -1,5 +1,5 @@
 <?php
-    require "dbCon.php";
+require "../dbCon.php";
 
     
     $ngaydangki=$_POST['ngaydangki'];

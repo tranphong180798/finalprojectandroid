@@ -1,6 +1,6 @@
 <?php
 
-    require "dbCon.php";
+require "../dbCon.php";
     $idDK=$_POST['idCuaMonDangKi'];
     $tenuser=$_POST['tenuser'];
     $query="DELETE FROM result WHERE subjects_id='$idDK' ";

@@ -1,6 +1,6 @@
 <?php
 
-    require "dbCon.php";
+require "../dbCon.php";
     $idgv=$_POST['idCuaGiaoVien'];
     $query="DELETE FROM teacher WHERE idTeacher='$idgv' ";
 

@@ -1,6 +1,6 @@
 <?php
 
-    require "dbCon.php";
+require "../dbCon.php";
     $id=$_POST['idGV'];
     $hoten=$_POST['hotenGV'];
     $tuoi=$_POST['tuoiGGV'];

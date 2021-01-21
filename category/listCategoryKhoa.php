@@ -1,6 +1,6 @@
 <?php
 
-require "dbCon.php";
+require "../dbCon.php";
 
  $query="SELECT *FROM category";
  $data=mysqli_query($connect,$query);
@@ -9,7 +9,7 @@ require "dbCon.php";
 //tao class
  class Category{
 //tao construct
-    function Category($id,$tenKhoa)
+    function __construct($id,$tenKhoa)
     {
         $this->ID=$id;
         $this->TenKhoa=$tenKhoa;

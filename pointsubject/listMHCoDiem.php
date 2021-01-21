@@ -1,6 +1,6 @@
 <?php
 
-require "dbCon.php";
+require "../dbCon.php";
 
  $query="SELECT *FROM student";
  $data=mysqli_query($connect,$query);
@@ -9,7 +9,7 @@ require "dbCon.php";
 //tao class
  class SinhVien{
 //tao construct
-    function SinhVien($id,$hoten,$namsinh,$diachi)
+    function __construct($id,$hoten,$namsinh,$diachi)
     {
         $this->ID=$id;
         $this->HoTen=$hoten;
