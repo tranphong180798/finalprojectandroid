@@ -23,16 +23,17 @@ require "dbCon.php";
         $this->Tuoi=$tuoi;
         $this->Khoa=$khoa;
         $this->NienKhoa=$nienkhoa;
-       
+
     }
 }
 //tao mang
-$mangSV=array();
+$mangSV= [];
 
 while($row=mysqli_fetch_assoc($data))
  {
-        array_push($mangSV,new User($row['idUser'],$row['NAME'],$row['mssv'],$row['username'],$row['password'],$row['DateOfBirth']
-        ,$row['gender'],$row['address'],$row['role'],$row['age'],$row['faculty'],$row['schoolyear']));
+     $mangSV[] = ['id'=>$row['idUser'], 'name'=>$row['NAME']];
+//        array_push($mangSV,new User($row['idUser'],$row['NAME'],$row['mssv'],$row['username'],$row['password'],$row['DateOfBirth']
+//        ,$row['gender'],$row['address'],$row['role'],$row['age'],$row['faculty'],$row['schoolyear']));
  }
 
  var_dump($mangSV);
